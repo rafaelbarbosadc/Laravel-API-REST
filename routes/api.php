@@ -19,6 +19,7 @@ use App\Users;
     // Events
     Route::get('events', 'EventsController@index');
     Route::get('events/search/{term}', 'EventsController@getByName');
+    Route::get('events/date', 'EventsController@getByDate');
     Route::get('events/{event}', 'EventsController@show');
     Route::post('events', 'EventsController@store');
     Route::put('events/{event}', 'EventsController@update');

@@ -45,5 +45,33 @@ class EventsController extends Controller
        return response()->json($event, 201);
     }
 
+    public function getByDate(Request $request)
+    {
+        if(request('type') == 'year') {
+            $events = Events::whereYear('date', '=', request('date'))->get();
+
+            return response()->json($events,200);
+        }
+
+        if(request('type') == 'month') {
+            $events = Events::whereMonth('date', '=', request('date'))->get();
+
+            return response()->json($events,200);
+        }
+
+        if(request('type') == 'day') {
+            $events = Events::whereDay('date', '=', request('date'))->get();
+
+            return response()->json($events,200);
+        }
+
+        if(request('type') == 'date') {
+            $events = Events::whereDate('date', '=', request('date'))->get();
+
+            return response()->json($events,200);
+        }
+
+
+    }
 
 }
