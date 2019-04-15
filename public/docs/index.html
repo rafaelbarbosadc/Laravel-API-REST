@@ -1,0 +1,610 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/all.js"></script>
+
+
+          <script>
+        $(function() {
+            setupLanguages(["bash","javascript"]);
+        });
+      </script>
+      </head>
+
+  <body class="">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+        <img src="images/logo.png" />
+                    <div class="lang-selector">
+                                  <a href="#" data-language-name="bash">bash</a>
+                                  <a href="#" data-language-name="javascript">javascript</a>
+                            </div>
+                            <div class="search">
+              <input type="text" class="search" id="input-search" placeholder="Search">
+            </div>
+            <ul class="search-results"></ul>
+              <div id="toc">
+      </div>
+                    <ul class="toc-footer">
+                                  <li><a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a></li>
+                            </ul>
+            </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+          <!-- START_INFO -->
+<h1>Info</h1>
+<p>Welcome to the generated API reference.
+<a href="http://localhost/docs/collection.json">Get Postman Collection</a></p>
+<!-- END_INFO -->
+<h1>general</h1>
+<!-- START_742a1cbd4a274c7269f0db99a704ff41 -->
+<h2>api/events</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/events" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/events");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">[
+    {
+        "id": 1,
+        "title": "Meet up - Coding UEA",
+        "description": "A meet up for UEA students",
+        "creator": 3,
+        "date": "2019-04-29 20:00:00",
+        "latitude": "-3.09258150",
+        "longitude": "-60.01850990",
+        "created_at": "2019-04-15 13:14:58",
+        "updated_at": "2019-04-15 13:14:58"
+    },
+    {
+        "id": 2,
+        "title": "Meet up - Coding UEA",
+        "description": "A meet up for UEA students",
+        "creator": 3,
+        "date": "2019-04-30 20:00:00",
+        "latitude": "-3.09258150",
+        "longitude": "-60.01850990",
+        "created_at": "2019-04-15 13:15:00",
+        "updated_at": "2019-04-15 13:15:00"
+    },
+    {
+        "id": 3,
+        "title": "Meet up - Coding UEA",
+        "description": "A meet up for UEA students",
+        "creator": 3,
+        "date": "2019-04-30 20:00:00",
+        "latitude": "-3.09258150",
+        "longitude": "-60.01850990",
+        "created_at": "2019-04-15 13:15:00",
+        "updated_at": "2019-04-15 13:15:00"
+    },
+    {
+        "id": 4,
+        "title": "Meet up - Coding UEA",
+        "description": "A meet up for UEA students",
+        "creator": 3,
+        "date": "2019-04-30 20:00:00",
+        "latitude": "-3.09258150",
+        "longitude": "-60.01850990",
+        "created_at": "2019-04-15 13:15:01",
+        "updated_at": "2019-04-15 13:15:01"
+    },
+    {
+        "id": 5,
+        "title": "Meet up - Coding UEA",
+        "description": "A meet up for UEA students",
+        "creator": 3,
+        "date": "2019-04-30 20:00:00",
+        "latitude": "-3.09258150",
+        "longitude": "-60.01850990",
+        "created_at": "2019-04-15 13:15:01",
+        "updated_at": "2019-04-15 13:15:01"
+    },
+    {
+        "id": 6,
+        "title": "Meet up - Coding UEA",
+        "description": "A meet up for UEA students",
+        "creator": 3,
+        "date": "2019-04-30 20:00:00",
+        "latitude": "-3.09258150",
+        "longitude": "-60.01850990",
+        "created_at": "2019-04-15 18:53:33",
+        "updated_at": "2019-04-15 18:53:33"
+    },
+    {
+        "id": 7,
+        "title": "Meet up - Coding UEA",
+        "description": "A meet up for UEA students",
+        "creator": 3,
+        "date": "2019-04-30 20:00:00",
+        "latitude": "-3.09258150",
+        "longitude": "-60.01850990",
+        "created_at": "2019-04-15 19:09:51",
+        "updated_at": "2019-04-15 19:09:51"
+    },
+    {
+        "id": 8,
+        "title": "Meet up - Coding UEA",
+        "description": "A meet up for UEA students",
+        "creator": 3,
+        "date": "2019-04-30 20:00:00",
+        "latitude": "-3.09258150",
+        "longitude": "-60.01850990",
+        "created_at": "2019-04-15 19:09:52",
+        "updated_at": "2019-04-15 19:09:52"
+    },
+    {
+        "id": 9,
+        "title": "Meet up - Coding UEA",
+        "description": "A meet up for UEA students",
+        "creator": 3,
+        "date": "2019-04-30 20:00:00",
+        "latitude": "-3.09258150",
+        "longitude": "-60.01850990",
+        "created_at": "2019-04-15 19:09:53",
+        "updated_at": "2019-04-15 19:09:53"
+    }
+]</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/events</code></p>
+<!-- END_742a1cbd4a274c7269f0db99a704ff41 -->
+<!-- START_8d14e5e937cf4c56287dab915670d893 -->
+<h2>api/events/search/{term}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/events/search/{term}" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/events/search/{term}");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (201):</p>
+</blockquote>
+<pre><code class="language-json">[]</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/events/search/{term}</code></p>
+<!-- END_8d14e5e937cf4c56287dab915670d893 -->
+<!-- START_c2a79cd75e9fa4f038d410b6f2eb9ecc -->
+<h2>api/events/date</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/events/date" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/events/date");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">null</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/events/date</code></p>
+<!-- END_c2a79cd75e9fa4f038d410b6f2eb9ecc -->
+<!-- START_379a3beb17bbb91528d80d8507f69655 -->
+<h2>api/events/{event}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/events/{event}" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/events/{event}");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "id": 1,
+    "title": "Meet up - Coding UEA",
+    "description": "A meet up for UEA students",
+    "creator": 3,
+    "date": "2019-04-29 20:00:00",
+    "latitude": "-3.09258150",
+    "longitude": "-60.01850990",
+    "created_at": "2019-04-15 13:14:58",
+    "updated_at": "2019-04-15 13:14:58"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/events/{event}</code></p>
+<!-- END_379a3beb17bbb91528d80d8507f69655 -->
+<!-- START_de3413bf02c9bb71627fa96e1c1c409f -->
+<h2>api/events</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/api/events" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/events");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/events</code></p>
+<!-- END_de3413bf02c9bb71627fa96e1c1c409f -->
+<!-- START_388e610b5754b1df34564c1c6c66a126 -->
+<h2>api/events/{event}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT "http://localhost/api/events/{event}" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/events/{event}");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT api/events/{event}</code></p>
+<!-- END_388e610b5754b1df34564c1c6c66a126 -->
+<!-- START_379a30feb2949828b5f95efbfd7649c3 -->
+<h2>api/events/{event}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE "http://localhost/api/events/{event}" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/events/{event}");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE api/events/{event}</code></p>
+<!-- END_379a30feb2949828b5f95efbfd7649c3 -->
+<!-- START_2ce15797e0f1735fc71010bfecd6110d -->
+<h2>api/submit</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/api/submit" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/submit");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/submit</code></p>
+<!-- END_2ce15797e0f1735fc71010bfecd6110d -->
+<!-- START_70b56449b3f97638c43875938d7942bb -->
+<h2>api/checkin</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/api/checkin" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/checkin");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/checkin</code></p>
+<!-- END_70b56449b3f97638c43875938d7942bb -->
+<!-- START_fc1e4f6a697e3c48257de845299b71d5 -->
+<h2>api/users</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/users" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/users");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">[
+    {
+        "id": 1,
+        "name": "Teste",
+        "email": "rafael4@gmail.com",
+        "email_verified_at": null,
+        "created_at": "2019-04-15 13:14:42",
+        "updated_at": "2019-04-15 13:14:42",
+        "api_token": null
+    },
+    {
+        "id": 2,
+        "name": "Teste",
+        "email": "rafael3@gmail.com",
+        "email_verified_at": null,
+        "created_at": "2019-04-15 13:33:36",
+        "updated_at": "2019-04-15 13:33:36",
+        "api_token": null
+    }
+]</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/users</code></p>
+<!-- END_fc1e4f6a697e3c48257de845299b71d5 -->
+<!-- START_ab2bc91546c6e0ee3a4e59d7c6e6a8ad -->
+<h2>api/users/search/{term}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/users/search/{term}" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/users/search/{term}");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (201):</p>
+</blockquote>
+<pre><code class="language-json">[]</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/users/search/{term}</code></p>
+<!-- END_ab2bc91546c6e0ee3a4e59d7c6e6a8ad -->
+<!-- START_8653614346cb0e3d444d164579a0a0a2 -->
+<h2>api/users/{user}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/users/{user}" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/users/{user}");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "id": 1,
+    "name": "Teste",
+    "email": "rafael4@gmail.com",
+    "email_verified_at": null,
+    "created_at": "2019-04-15 13:14:42",
+    "updated_at": "2019-04-15 13:14:42",
+    "api_token": null
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/users/{user}</code></p>
+<!-- END_8653614346cb0e3d444d164579a0a0a2 -->
+<!-- START_78e59f373e92a1bb338f7d17b183ae6a -->
+<h2>api/users/{user}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT "http://localhost/api/users/{user}" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/users/{user}");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT api/users/{user}</code></p>
+<!-- END_78e59f373e92a1bb338f7d17b183ae6a -->
+<!-- START_d2db7a9fe3abd141d5adbc367a88e969 -->
+<h2>api/users/{user}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE "http://localhost/api/users/{user}" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/users/{user}");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE api/users/{user}</code></p>
+<!-- END_d2db7a9fe3abd141d5adbc367a88e969 -->
+<!-- START_c3fa189a6c95ca36ad6ac4791a873d23 -->
+<h2>login api</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/api/login" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/login");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/login</code></p>
+<!-- END_c3fa189a6c95ca36ad6ac4791a873d23 -->
+<!-- START_d7b7952e7fdddc07c978c9bdaf757acf -->
+<h2>Register api</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/api/register" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/register");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/register</code></p>
+<!-- END_d7b7952e7fdddc07c978c9bdaf757acf -->
+      </div>
+      <div class="dark-box">
+                        <div class="lang-selector">
+                                    <a href="#" data-language-name="bash">bash</a>
+                                    <a href="#" data-language-name="javascript">javascript</a>
+                              </div>
+                </div>
+    </div>
+  </body>
+</html>
