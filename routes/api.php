@@ -15,6 +15,11 @@ use App\Users;
 |
 */
 
+// Login and Register
+Route::post('login', 'API\UserController@login');
+Route::post('register', 'API\UserController@register');
+
+Route::group(['middleware' => 'auth:api'], function(){
 
     // Events
     Route::get('events', 'EventsController@index');
@@ -35,11 +40,5 @@ use App\Users;
     Route::get('users/{user}', 'UsersController@show');
     Route::put('users/{user}', 'UsersController@update');
     Route::delete('users/{user}', 'UsersController@delete');
-
-// Login and Register
-Route::post('login', 'API\UserController@login');
-Route::post('register', 'API\UserController@register');
-
-Route::group(['middleware' => 'auth:api'], function(){
 
 });

@@ -149,6 +149,17 @@ fetch(url, {
         "longitude": "-60.01850990",
         "created_at": "2019-04-15 19:09:53",
         "updated_at": "2019-04-15 19:09:53"
+    },
+    {
+        "id": 10,
+        "title": "Meet up - Coding UEA",
+        "description": "A meet up for UEA students",
+        "creator": 3,
+        "date": "2019-04-30 20:00:00",
+        "latitude": "-3.09258150",
+        "longitude": "-60.01850990",
+        "created_at": "2019-04-15 20:02:25",
+        "updated_at": "2019-04-15 20:02:25"
     }
 ]
 ```
@@ -531,7 +542,7 @@ fetch(url, {
     .then(json => console.log(json));
 ```
 
-> Example response (201):
+> Example response (200):
 
 ```json
 []

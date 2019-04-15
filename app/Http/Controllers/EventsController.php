@@ -19,6 +19,7 @@ class EventsController extends Controller
 
     public function store(Request $request)
     {
+
         $event = Events::create($request->all());
 
         return response()->json($event, 201);

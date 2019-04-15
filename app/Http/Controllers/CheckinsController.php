@@ -15,10 +15,16 @@ class CheckinsController extends Controller
         $user = User::find(request('user_id'));
 
         if(!$event) {
-            return response()->json(['error'=> 'Event not found']);
+            return response()->json([
+                'error' => 01,
+                'message' => 'Event not found'
+            ], 204);
         }
         if(!$user) {
-            return response()->json(['error'=> 'User not found']);
+            return response()->json([
+                'error' => 02,
+                'message' => 'User not found'
+            ], 204);
         }
         $checkins = Checkins::create([
             'status' => 0,
@@ -34,15 +40,24 @@ class CheckinsController extends Controller
         $user = User::find(request('user_id'));
 
         if(!$event) {
-            return response()->json(['error'=> 'Event not found']);
+            return response()->json([
+                'error' => 01,
+                'message' => 'Event not found'
+            ], 204);
         }
 
         if(!$user) {
-            return response()->json(['error'=> 'User not found']);
+            return response()->json([
+                'error' => 02,
+                'message' => 'User not found'
+            ], 204);
         }
 
         if($event->latitude != request('latitude') || $event->longitude != request('longitude') ) {
-            return response()->json(['error'=> 'Checkin geolocation does not match Event geolocation']);
+            return response()->json([
+                'error' => 03,
+                'message' => ' Checkin geolocation does not match Event geolocation'
+            ], 204);
         }
 
         $checkin = Checkins::where
@@ -54,8 +69,12 @@ class CheckinsController extends Controller
                             "latitude" => request('latitude'),
                             "longitude" => request('longitude'),
                         ]);
+
         if(!$checkin) {
-            return response()->json(['error'=> 'No submission from this user for this event or already checked in']);
+            return response()->json([
+                'error' => 04,
+                'message' => 'No submission from this user for this event or already checked in'
+            ], 204);
         }
 
         return response()->json($request->all(), 201);

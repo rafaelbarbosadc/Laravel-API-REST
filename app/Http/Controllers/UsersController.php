@@ -43,12 +43,12 @@ class UsersController extends Controller
     {
        $user = User::where('name', 'like', "%$term%")->get();
 
-       return response()->json($user, 201);
+       return response()->json($user, 200);
     }
 
     public function login(Request $request, $email, $password)
     {
-        $user = User::where('email', '=', $email)->get();
-        return response()->json($user,201);
+
+        return response()->json($user,200);
     }
 }
