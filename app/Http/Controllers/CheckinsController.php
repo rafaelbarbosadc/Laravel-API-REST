@@ -58,6 +58,6 @@ class CheckinsController extends Controller
             return response()->json(['error'=> 'No submission from this user for this event or already checked in']);
         }
 
-        return response()->json($checkin, 201);
+        return response()->json($request->all(), 201);
     }
 }
