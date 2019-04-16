@@ -32,7 +32,7 @@ class CheckinsController extends Controller
             'event_id' => request('event_id'),
         ]);
 
-        return response()->json($event, 201);
+        return response()->json($checkins, 201);
     }
 
     public function checkin(Request $request) {
@@ -43,21 +43,21 @@ class CheckinsController extends Controller
             return response()->json([
                 'error' => 01,
                 'message' => 'Event not found'
-            ], 204);
+            ]);
         }
 
         if(!$user) {
             return response()->json([
                 'error' => 02,
                 'message' => 'User not found'
-            ], 204);
+            ]);
         }
 
         if($event->latitude != request('latitude') || $event->longitude != request('longitude') ) {
             return response()->json([
                 'error' => 03,
-                'message' => ' Checkin geolocation does not match Event geolocation'
-            ], 204);
+                'message' => 'Checkin geolocation does not match Event geolocation'
+            ]);
         }
 
         $checkin = Checkins::where
@@ -74,7 +74,7 @@ class CheckinsController extends Controller
             return response()->json([
                 'error' => 04,
                 'message' => 'No submission from this user for this event or already checked in'
-            ], 204);
+            ]);
         }
 
         return response()->json($request->all(), 201);
