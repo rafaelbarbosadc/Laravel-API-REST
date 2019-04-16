@@ -21,6 +21,74 @@ Welcome to the generated API reference.
 <!-- END_INFO -->
 
 #general
+<!-- START_c3fa189a6c95ca36ad6ac4791a873d23 -->
+## login api
+
+> Example request:
+
+```bash
+curl -X POST "http://localhost/api/login" \
+    -H "Authorization: Bearer {token}"
+```
+
+```javascript
+const url = new URL("http://localhost/api/login");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+### HTTP Request
+`POST api/login`
+
+
+<!-- END_c3fa189a6c95ca36ad6ac4791a873d23 -->
+
+<!-- START_d7b7952e7fdddc07c978c9bdaf757acf -->
+## Register api
+
+> Example request:
+
+```bash
+curl -X POST "http://localhost/api/register" \
+    -H "Authorization: Bearer {token}"
+```
+
+```javascript
+const url = new URL("http://localhost/api/register");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+### HTTP Request
+`POST api/register`
+
+
+<!-- END_d7b7952e7fdddc07c978c9bdaf757acf -->
+
 <!-- START_742a1cbd4a274c7269f0db99a704ff41 -->
 ## api/events
 > Example request:
@@ -47,121 +115,12 @@ fetch(url, {
     .then(json => console.log(json));
 ```
 
-> Example response (200):
+> Example response (404):
 
 ```json
-[
-    {
-        "id": 1,
-        "title": "Meet up - Coding UEA",
-        "description": "A meet up for UEA students",
-        "creator": 3,
-        "date": "2019-04-29 20:00:00",
-        "latitude": "-3.09258150",
-        "longitude": "-60.01850990",
-        "created_at": "2019-04-15 13:14:58",
-        "updated_at": "2019-04-15 13:14:58"
-    },
-    {
-        "id": 2,
-        "title": "Meet up - Coding UEA",
-        "description": "A meet up for UEA students",
-        "creator": 3,
-        "date": "2019-04-30 20:00:00",
-        "latitude": "-3.09258150",
-        "longitude": "-60.01850990",
-        "created_at": "2019-04-15 13:15:00",
-        "updated_at": "2019-04-15 13:15:00"
-    },
-    {
-        "id": 3,
-        "title": "Meet up - Coding UEA",
-        "description": "A meet up for UEA students",
-        "creator": 3,
-        "date": "2019-04-30 20:00:00",
-        "latitude": "-3.09258150",
-        "longitude": "-60.01850990",
-        "created_at": "2019-04-15 13:15:00",
-        "updated_at": "2019-04-15 13:15:00"
-    },
-    {
-        "id": 4,
-        "title": "Meet up - Coding UEA",
-        "description": "A meet up for UEA students",
-        "creator": 3,
-        "date": "2019-04-30 20:00:00",
-        "latitude": "-3.09258150",
-        "longitude": "-60.01850990",
-        "created_at": "2019-04-15 13:15:01",
-        "updated_at": "2019-04-15 13:15:01"
-    },
-    {
-        "id": 5,
-        "title": "Meet up - Coding UEA",
-        "description": "A meet up for UEA students",
-        "creator": 3,
-        "date": "2019-04-30 20:00:00",
-        "latitude": "-3.09258150",
-        "longitude": "-60.01850990",
-        "created_at": "2019-04-15 13:15:01",
-        "updated_at": "2019-04-15 13:15:01"
-    },
-    {
-        "id": 6,
-        "title": "Meet up - Coding UEA",
-        "description": "A meet up for UEA students",
-        "creator": 3,
-        "date": "2019-04-30 20:00:00",
-        "latitude": "-3.09258150",
-        "longitude": "-60.01850990",
-        "created_at": "2019-04-15 18:53:33",
-        "updated_at": "2019-04-15 18:53:33"
-    },
-    {
-        "id": 7,
-        "title": "Meet up - Coding UEA",
-        "description": "A meet up for UEA students",
-        "creator": 3,
-        "date": "2019-04-30 20:00:00",
-        "latitude": "-3.09258150",
-        "longitude": "-60.01850990",
-        "created_at": "2019-04-15 19:09:51",
-        "updated_at": "2019-04-15 19:09:51"
-    },
-    {
-        "id": 8,
-        "title": "Meet up - Coding UEA",
-        "description": "A meet up for UEA students",
-        "creator": 3,
-        "date": "2019-04-30 20:00:00",
-        "latitude": "-3.09258150",
-        "longitude": "-60.01850990",
-        "created_at": "2019-04-15 19:09:52",
-        "updated_at": "2019-04-15 19:09:52"
-    },
-    {
-        "id": 9,
-        "title": "Meet up - Coding UEA",
-        "description": "A meet up for UEA students",
-        "creator": 3,
-        "date": "2019-04-30 20:00:00",
-        "latitude": "-3.09258150",
-        "longitude": "-60.01850990",
-        "created_at": "2019-04-15 19:09:53",
-        "updated_at": "2019-04-15 19:09:53"
-    },
-    {
-        "id": 10,
-        "title": "Meet up - Coding UEA",
-        "description": "A meet up for UEA students",
-        "creator": 3,
-        "date": "2019-04-30 20:00:00",
-        "latitude": "-3.09258150",
-        "longitude": "-60.01850990",
-        "created_at": "2019-04-15 20:02:25",
-        "updated_at": "2019-04-15 20:02:25"
-    }
-]
+{
+    "error": {}
+}
 ```
 
 ### HTTP Request
@@ -196,10 +155,12 @@ fetch(url, {
     .then(json => console.log(json));
 ```
 
-> Example response (201):
+> Example response (404):
 
 ```json
-[]
+{
+    "error": {}
+}
 ```
 
 ### HTTP Request
@@ -234,10 +195,12 @@ fetch(url, {
     .then(json => console.log(json));
 ```
 
-> Example response (200):
+> Example response (404):
 
 ```json
-null
+{
+    "error": {}
+}
 ```
 
 ### HTTP Request
@@ -272,19 +235,11 @@ fetch(url, {
     .then(json => console.log(json));
 ```
 
-> Example response (200):
+> Example response (404):
 
 ```json
 {
-    "id": 1,
-    "title": "Meet up - Coding UEA",
-    "description": "A meet up for UEA students",
-    "creator": 3,
-    "date": "2019-04-29 20:00:00",
-    "latitude": "-3.09258150",
-    "longitude": "-60.01850990",
-    "created_at": "2019-04-15 13:14:58",
-    "updated_at": "2019-04-15 13:14:58"
+    "error": {}
 }
 ```
 
@@ -485,29 +440,12 @@ fetch(url, {
     .then(json => console.log(json));
 ```
 
-> Example response (200):
+> Example response (404):
 
 ```json
-[
-    {
-        "id": 1,
-        "name": "Teste",
-        "email": "rafael4@gmail.com",
-        "email_verified_at": null,
-        "created_at": "2019-04-15 13:14:42",
-        "updated_at": "2019-04-15 13:14:42",
-        "api_token": null
-    },
-    {
-        "id": 2,
-        "name": "Teste",
-        "email": "rafael3@gmail.com",
-        "email_verified_at": null,
-        "created_at": "2019-04-15 13:33:36",
-        "updated_at": "2019-04-15 13:33:36",
-        "api_token": null
-    }
-]
+{
+    "error": {}
+}
 ```
 
 ### HTTP Request
@@ -542,10 +480,12 @@ fetch(url, {
     .then(json => console.log(json));
 ```
 
-> Example response (200):
+> Example response (404):
 
 ```json
-[]
+{
+    "error": {}
+}
 ```
 
 ### HTTP Request
@@ -580,17 +520,11 @@ fetch(url, {
     .then(json => console.log(json));
 ```
 
-> Example response (200):
+> Example response (404):
 
 ```json
 {
-    "id": 1,
-    "name": "Teste",
-    "email": "rafael4@gmail.com",
-    "email_verified_at": null,
-    "created_at": "2019-04-15 13:14:42",
-    "updated_at": "2019-04-15 13:14:42",
-    "api_token": null
+    "error": {}
 }
 ```
 
@@ -665,73 +599,5 @@ fetch(url, {
 
 
 <!-- END_d2db7a9fe3abd141d5adbc367a88e969 -->
-
-<!-- START_c3fa189a6c95ca36ad6ac4791a873d23 -->
-## login api
-
-> Example request:
-
-```bash
-curl -X POST "http://localhost/api/login" \
-    -H "Authorization: Bearer {token}"
-```
-
-```javascript
-const url = new URL("http://localhost/api/login");
-
-let headers = {
-    "Authorization": "Bearer {token}",
-    "Accept": "application/json",
-    "Content-Type": "application/json",
-}
-
-fetch(url, {
-    method: "POST",
-    headers: headers,
-})
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-### HTTP Request
-`POST api/login`
-
-
-<!-- END_c3fa189a6c95ca36ad6ac4791a873d23 -->
-
-<!-- START_d7b7952e7fdddc07c978c9bdaf757acf -->
-## Register api
-
-> Example request:
-
-```bash
-curl -X POST "http://localhost/api/register" \
-    -H "Authorization: Bearer {token}"
-```
-
-```javascript
-const url = new URL("http://localhost/api/register");
-
-let headers = {
-    "Authorization": "Bearer {token}",
-    "Accept": "application/json",
-    "Content-Type": "application/json",
-}
-
-fetch(url, {
-    method: "POST",
-    headers: headers,
-})
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-### HTTP Request
-`POST api/register`
-
-
-<!-- END_d7b7952e7fdddc07c978c9bdaf757acf -->
 
 
