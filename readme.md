@@ -3,6 +3,7 @@
 ## Instalação
 
 -   Na pasta raiz, renomeie o arquivo `.env.example` para `.env` e insira as configurações do banco (foi usado MySQL)
+-   Crie um banco de dados com o nome inserido no `.env`
 -   Execute `composer install` ou `php composer.phar install`
 -   Execute `php artisan key:generate`
 -   Execute `php artisan migrate`
@@ -55,6 +56,6 @@
 -   [PUT] `api/users/{user}` - Altera usuário
 -   [DELETE] `api/users/{user}` - Deleta usuário
 
-# Postman
+### Postman
 
 -   Há um arquivo em `public/docs/collection.json` que pode ser importado para o Postman para testar as rotas.
