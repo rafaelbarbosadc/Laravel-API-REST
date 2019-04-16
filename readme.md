@@ -11,7 +11,7 @@
 
 ## Rotas
 
-# Todas as rotas utilizam JSON para inserir os dados
+### Todas as rotas utilizam JSON para inserir os dados
 
 -   Utilize a rota '/api/register' com os dados abaixo para cadastrar um usuário e receber um token
 
