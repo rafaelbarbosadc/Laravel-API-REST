@@ -8,6 +8,7 @@
 -   Execute `php artisan key:generate`
 -   Execute `php artisan migrate`
 -   Execute `php artisan db:seed`
+-   Execute `php artisan passport:install`
 -   Execute `php artisan serve` para iniciar o servidor na porta 8000.
 
 ## Rotas
