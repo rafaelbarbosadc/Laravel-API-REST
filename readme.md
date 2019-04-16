@@ -1,5 +1,12 @@
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
+# Referências
+-   [Database: Query Builder - Laravel](https://laravel.com/docs/5.8/queries)
+-   [Controllers - Laravel](https://laravel.com/docs/5.8/controllers)
+-   [Passport - Laravel](https://laravel.com/docs/5.8/passport)
+-   [Migrations - Laravel](https://laravel.com/docs/5.8/migrations)
+
+
 ## Instalação
 
 -   Na pasta raiz, renomeie o arquivo `.env.example` para `.env` e insira as configurações do banco (foi usado MySQL)
@@ -60,3 +67,5 @@
 ### Postman
 
 -   Há um arquivo em `public/docs/collection.json` que pode ser importado para o Postman para testar as rotas.
+
+
